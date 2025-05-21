@@ -1,0 +1,16 @@
+<!-- templates/decrypt.html -->
+{% extends 'layout.html' %}
+{% block content %}
+<h2>Giải mã tệp bằng AES</h2>
+<form method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="file" class="form-label">Chọn tệp đã mã hóa</label>
+        <input class="form-control" type="file" id="file" name="file" required>
+    </div>
+    <div class="mb-3">
+        <label for="key" class="form-label">Nhập khóa (key)</label>
+        <input class="form-control" type="text" id="key" name="key" required>
+    </div>
+    <button type="submit" class="btn btn-success">🔓 Giải mã</button>
+</form>
+{% endblock %}
